@@ -183,6 +183,7 @@ function getSceneControlButtons(buttons) {
 }
 
 Hooks.on('canvasReady', () => {
+    if(canvas.grid.type === 0 ) return
     let map = new coord()
     window.MapCoordinates = map
 });
