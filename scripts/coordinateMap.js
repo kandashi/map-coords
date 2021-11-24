@@ -115,7 +115,6 @@ class coord {
     }
 
     toggle() {
-        debugger
         switch (this.state) {
             case 1: {
                 this.ref.visible = true

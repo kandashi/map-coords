@@ -1,0 +1,15 @@
+{
+    "settings.offset.name": "Décalage",
+    "settings.offset.hint": "Décalage des coordonnées en pixels",
+    "settings.xValue.name": "Valeur X",
+    "settings.xValue.hint": "Marquages de chiffres ou de lettres pour la grille X",
+    "settings.yValue.name": "Valeur Y",
+    "settings.yValue.hint": "Marquages de chiffres ou de lettres pour la grille Y",
+    "settings.keybind.name": "Positionner le raccourci clavier",
+    "settings.keybind.hint": "Quel raccourci clavier utiliser pour ‘Coordonnée en un clic'",
+    "settings.timeOut.name": "Délai du Clic",
+    "settings.timeOut.hint": "Combien de temps à afficher pour ‘Coordonnée en un Clic'",
+    "settings.value.number": "Numéro",
+    "settings.value.letter": "Lettre",
+    "button.name": "Basculer les coordonnées"
+}
