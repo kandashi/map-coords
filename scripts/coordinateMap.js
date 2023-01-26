@@ -60,7 +60,7 @@ class coord {
     }
 
     numToSSColumn(num) {
-        var s = '', t;
+        let s = '', t;
 
         while (num > 0) {
             t = (num - 1) % 26;
@@ -79,7 +79,7 @@ class coord {
 
     left(row, col) {
         let pos = canvas.grid.grid.getPixelsFromGridPosition(row, col)
-        pos[1] += this.type == 4 ? 0 : this.h / 2
+        pos[1] += this.type === 4 ? 0 : this.h / 2
         pos[0] = this.internal.left - this.off - this.size / 4
         return pos
     }
@@ -102,7 +102,7 @@ class coord {
 
     addListener() {
         canvas.stage.addListener("click", (function (event) {
-            if (!game.keyboard._downKeys.has(game.settings.get("map-coords", "keybind"))) return
+            if (!game.keyboard.downKeys.has(game.settings.get("map-coords", "keybind"))) return
             this.mouseCoords();
         }).bind(this))
     }
@@ -168,7 +168,7 @@ class coord {
 }
 
 function getSceneControlButtons(buttons) {
-    let tokenButton = buttons.find(b => b.name == "measure")
+    let tokenButton = buttons.find(b => b.name === "measure")
     if (tokenButton) {
         tokenButton.tools.push({
             name: "map-coords",
@@ -182,9 +182,8 @@ function getSceneControlButtons(buttons) {
 }
 
 Hooks.on('canvasReady', () => {
-    if(canvas.grid.type === 0 ) return
-    let map = new coord()
-    window.MapCoordinates = map
+    if(canvas.grid.type === foundry.CONST.GRID_TYPES.GRIDLESS ) return
+    window.MapCoordinates = new coord()
 });
 
 Hooks.on('getSceneControlButtons', getSceneControlButtons)
