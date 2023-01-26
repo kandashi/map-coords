@@ -102,7 +102,7 @@ class coord {
 
     addListener() {
         canvas.stage.addListener("click", (function (event) {
-            if (!game.keyboard._downKeys.has(game.settings.get("map-coords", "keybind"))) return
+            if (!game.keyboard.downKeys.has(game.settings.get("map-coords", "keybind"))) return
             this.mouseCoords();
         }).bind(this))
     }
